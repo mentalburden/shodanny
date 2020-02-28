@@ -15,11 +15,6 @@ jason = open(jsonname,"ab+")
 
 #---------------------------Funcs start here-
 
-def cleanBaby(stringyboi):
-        re.sub(r':', '-', stringyboi)
-	re.sub(r',', '-', stringyboi)
-        return str(stringyboi.encode('utf-8'))
-
 def runFullQuery(searchyboi):
 	try:
         	results = api.search(searchyboi)
