@@ -35,7 +35,7 @@ def runTayne(hatwobble):
 	time.sleep(apicalllimiter)
 
 
-def runNudeTayne(hatwobble):
+def runNTayne(hatwobble):
         hatarray = []
         singlehost = api.host(hatwobble)
         hatorg = singlehost.get('org', 'n/a')
@@ -73,7 +73,7 @@ def runflarhgunnstow(tayne):
 	except shodan.APIError, e:
 		print( 'Error: %s' % e)
 	for x in celeryarray:
-		runNudeTayne(x)
+		runNTayne(x)
 
 #---------------------------Funcs end here-
 
@@ -86,7 +86,7 @@ parsyboi = argparse.ArgumentParser()
 parsyboi.add_argument('-s','--single_ip', help='Get details for a single IP', required=False)
 parsyboi.add_argument('-q','--query_regular', help='Run a plaintext search, wrapped in quotes for multiple values, "whatever port=8080"', required=False)
 parsyboi.add_argument('-c','--celery_man', help='Computer, load up celery man please. (recursive query regular)', required=False)
-parsyboi.add_argument('-f','--flarh_gunn_stow', help='Show me nude tayne. (recursive query regular with json output)', required=False)
+parsyboi.add_argument('-f','--flarh_gunn_stow', help='Show me N tayne. (recursive query regular with json output)', required=False)
 argyboi = parsyboi.parse_args()
 
 hostsearch = argyboi.single_ip
